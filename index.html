@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%232b5a8a%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2720%27 text-anchor=%27middle%27 fill=%27white%27%3E%D7%9E%3C/text%3E%3C/svg%3E"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mefarshei HaOtzar - מפרשי האוצר</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="top">
+ <div class="brand"><span class="logo">מ</span><div><b>Mefarshei HaOtzar</b><small>מפרשי האוצר</small></div></div>
+ <button id="srcBtn" class="srcbtn" type="button">My sources <span id="srcCount">0</span></button>
+ <form id="searchForm" class="search" autocomplete="off"><input id="q" type="search" placeholder="Search an idea or a daf" aria-label="Search"><button type="submit">Search</button><label class="ai" title="On: search by meaning with AI. Off: exact word search."><input type="checkbox" id="aiToggle" checked><span class="sw"></span><b>AI</b></label></form>
+</header>
+<main class="layout">
+ <section class="reader" id="reader">
+  <div class="picker"><select id="kind"><option value="tanakh">Tanakh</option><option value="talmud">Gemara</option></select><select id="book"></select><select id="sec"></select><div class="seg" id="lang"><button data-l="both" class="on">Both</button><button data-l="he">עברית</button><button data-l="en">English</button></div></div>
+  <div id="text" class="text"></div>
+ </section>
+ <aside class="pane" id="pane"><div class="panehead"><b id="paneTitle">Commentary</b><button id="paneClose" aria-label="Close">×</button></div><div id="paneBody"></div></aside>
+</main>
+<div id="pop" class="pop" hidden></div>
+<section id="results" class="results" hidden></section>
+<footer class="legal"><p>Texts and commentaries come from <a href="https://www.sefaria.org" target="_blank" rel="noopener">Sefaria</a> via its public API. Each text keeps its own license (shown by Sefaria; many are CC-BY, CC-BY-SA or public domain), so check the version on sefaria.org before reusing. Meaning search runs in your browser with all-MiniLM-L6-v2 and ms-marco-MiniLM-L-6-v2 (Apache-2.0, via transformers.js, Apache-2.0); Hebrew-query search is experimental. Kashya/terutz tags are keyword guesses, not rulings. This is a study aid, not a halachic authority.</p></footer><script src="app.js"></script><script src="search.js"></script><script src="sources.js"></script></body></html>
